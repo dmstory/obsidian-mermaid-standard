@@ -26,7 +26,7 @@ Reading view and live preview both end up calling `pele.mount(el, source, opts)`
 - One `mermaid.initialize()` per render: `theme` follows the app (`theme-dark` → `dark`), `fontFamily` follows `--font-mermaid`.
 - Frontmatter `config:` and `%%{init}%%` directives still win over those defaults.
 - `securityLevel: 'strict'`, `suppressErrorRendering: true` — syntax errors become a single red line instead of an injected error diagram.
-- Bundled engine: mermaid 11.13.0 (~3.4 MB `main.js`).
+- Bundled engine: mermaid 11.17.2 (~3.4 MB `main.js`).
 
 ## Compatibility
 

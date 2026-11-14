@@ -25,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmstory/obsidian-mermaid-standard.git"
+  },
+  "overrides": {
+    "katex": "^0.18.11"
   }
 }

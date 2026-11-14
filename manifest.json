@@ -3,7 +3,7 @@
   "name": "Mermaid Standard",
   "version": "1.0.1",
   "minAppVersion": "1.15.0",
-  "description": "Render mermaid code blocks with upstream mermaid, so standard config like theme, look and themeVariables works again",
+  "description": "Render mermaid code blocks with upstream mermaid, so standard config like theme, look and themeVariables works again.",
   "author": "dmstory",
   "authorUrl": "https://github.com/dmstory",
   "isDesktopOnly": false

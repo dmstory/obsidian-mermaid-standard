@@ -59,6 +59,15 @@ npm run build  # production build -> main.js
 
 `npm version patch|minor|major` bumps `manifest.json` and `versions.json` via `version-bump.mjs`; the tag push triggers `.github/workflows/release.yml`, which builds and attaches `main.js`, `manifest.json` and `styles.css` to the GitHub release.
 
+## Review notes
+
+The community directory's automated review reports two things worth explaining up front:
+
+- **Dynamic code execution (`eval` / `new Function`)** — this comes from the vendored mermaid bundle (one small helper inside mermaid's own code), not from plugin code. `src/main.js` contains no `eval`, no `new Function` and no remote code loading; everything is bundled at build time by esbuild.
+- **Artifact attestations** — releases are built by `.github/workflows/release.yml`, which attests `main.js`, `manifest.json` and `styles.css` with `actions/attest-build-provenance`, so the assets are verifiable against this repository.
+
+The plugin makes no network requests and collects no telemetry. It only swaps one method on `window.pele` inside the app.
+
 ## 中文
 
 Obsidian 1.15 起用自研的 Pele 引擎替换了 mermaid.js，`theme` / `look` / `themeVariables` 等标准 mermaid 配置不再生效。本插件接管 `pele.mount`，改回官方 mermaid 渲染，让这些配置恢复正常。安装后在「设置 → 第三方插件」里启用即可。

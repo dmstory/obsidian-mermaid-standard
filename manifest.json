@@ -1,0 +1,10 @@
+{
+  "id": "mermaid-standard",
+  "name": "Mermaid Standard",
+  "version": "1.0.0",
+  "minAppVersion": "1.15.0",
+  "description": "Render mermaid code blocks with upstream mermaid, so standard config like theme, look and themeVariables works again.",
+  "author": "dbtxdxy",
+  "authorUrl": "https://github.com/dbtxdxy",
+  "isDesktopOnly": false
+}

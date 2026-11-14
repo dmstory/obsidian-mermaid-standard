@@ -1,0 +1,7 @@
+.mermaid-standard-error {
+  font-family: var(--font-monospace);
+  font-size: 0.8em;
+  color: var(--text-error);
+  white-space: pre-wrap;
+  text-align: left;
+}

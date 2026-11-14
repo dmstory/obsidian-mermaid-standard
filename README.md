@@ -17,6 +17,8 @@ flowchart LR
     Risk -->|yes| Done[Done]
 ```
 
+![Screenshot](docs/screenshot.png)
+
 ## How it works
 
 Reading view and live preview both end up calling `pele.mount(el, source, opts)`. The plugin wraps `window.pele` (its exports are getter-only, so a `Object.create(pele)` wrapper is used instead of mutating) and replaces `mount` with a mermaid renderer that returns the same controller shape (`result / source / error / zoom / update / refresh / destroy`) and still calls `opts.onRender`, so Obsidian's link post-processing keeps working.
@@ -38,7 +40,7 @@ Reading view and live preview both end up calling `pele.mount(el, source, opts)`
 ## Install
 
 - **Community plugins**: browse for "Mermaid Standard" once it is listed.
-- **BRAT**: add `dbtxdxy/obsidian-mermaid-standard`.
+- **BRAT**: add `dmstory/obsidian-mermaid-standard`.
 - **Manual**: copy `main.js`, `manifest.json` and `styles.css` into `<vault>/.obsidian/plugins/mermaid-standard/`, then enable it in Settings → Community plugins.
 
 After enabling, scroll the open note or run the command **Re-render diagrams in current note**.

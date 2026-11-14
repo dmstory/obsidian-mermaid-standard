@@ -1,6 +1,6 @@
 {
   "name": "obsidian-mermaid-standard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Render mermaid code blocks with upstream mermaid so standard config (theme, look, themeVariables) works in Obsidian 1.15+.",
   "main": "main.js",
   "scripts": {
